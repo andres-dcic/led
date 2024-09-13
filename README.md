@@ -33,22 +33,45 @@ A continuación, un ejemplo de archivo YAML para un flujo de trabajo de integrac
 ```yaml
 name: Integracion Continua
 
-on:
-  push:
+#Descripción: Define el nombre del flujo de trabajo como "Integracion Continua". Este nombre aparece en la interfaz de GitHub #Actions y ayuda a identificar el flujo de trabajo en la lista de workflows.
+
+
+ on:
+   push:
     branches:
       - main
   #pull_request:
   # branches:
   #  - main
 
+#Descripción: Especifica los eventos que desencadenan la ejecución del flujo de trabajo.
+#    push:: El flujo de trabajo se activa cada vez que se realiza un push a la rama main.
+#     branches:: Define que el flujo de trabajo solo se activará para push en la rama main.
+#     pull_request: (comentado): Esta sección está comentada, lo que significa que actualmente está inactiva. Si se 
+#                                descomentara, el flujo de trabajo también se activaría en eventos de pull_request hacia la
+#                                rama main.
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+#Descripción: Define los trabajos (jobs) que se ejecutarán como parte del flujo de trabajo.
+# build:: Es el nombre del job. Puede ser nombrado de cualquier manera que refleje la tarea del job.
+#   runs-on:: Especifica el entorno en el que se ejecutará el job. En este caso, ubuntu-latest indica que el job se ejecutará  
+#             en un runner con la última versión de Ubuntu.
     
     steps:
     - name: Echo message
       run: |
         echo "Bienvenido Ingenieros 2024"
+
+#Descripción: Define una lista de pasos (steps) que se ejecutarán dentro del job.
+#- name: Echo message: Asigna un nombre al paso, en este caso, "Echo message". Este nombre se muestra en la interfaz de GitHub Actions para identificar el paso.
+#   run:: Especifica los comandos que se ejecutarán en este paso.
+#    echo "Bienvenido Ingenieros 2024": Ejecuta el comando shell echo, que imprime el mensaje "Bienvenido Ingenieros 2024" en la consola.
+
+
+
 ```
 
 
