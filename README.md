@@ -28,7 +28,7 @@ GitHub Actions es una plataforma de integración continua y entrega continua (CI
 
 ## Ejemplo de Flujo de Trabajo para Integración Continua
 
-A continuación, un ejemplo de archivo YAML para un flujo de trabajo de integración continua que muestra un mensaje y prueba un proyecto Node.js:
+A continuación, un ejemplo de archivo YAML para un flujo de trabajo de integración continua que muestra un mensaje:
 
 ```yaml
 name: Integracion Continua
