@@ -3,10 +3,10 @@ name: Integracion Continua
 on:
   push:
     branches:
-      - main
-  #pull_request:
-  # branches:
-  #  - main
+      - develop
+ #pull_request:
+ #  branches:
+ # - main
 
 jobs:
   build:
@@ -15,4 +15,4 @@ jobs:
     steps:
     - name: Echo message
       run: |
-        echo "Hola Ingenieros"
+        echo "Hola Ingenieros 2024"
