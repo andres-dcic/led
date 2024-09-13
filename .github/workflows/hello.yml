@@ -3,7 +3,8 @@ name: Integracion Continua
 on:
   push:
     branches:
-      - develop
+  #   - develop
+      - main
   #pull_request:
   # branches:
   #  - main
