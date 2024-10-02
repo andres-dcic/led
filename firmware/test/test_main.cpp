@@ -3,6 +3,12 @@
 #include <ArduinoFake.h>
 #include <unity.h>
 
+#ifdef ESP32
+    // Si estás en ESP32, evita incluir EEPROMFake
+    #undef EEPROM
+#endif
+
+
 using namespace fakeit;
 
 // Define el pin del LED
