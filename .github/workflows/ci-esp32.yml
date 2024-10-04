@@ -12,6 +12,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        environment: [esp32dev, uno, esp32-debug]  # List your environments here
+
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -25,9 +30,13 @@ jobs:
       run: |
         python3 -m pip install --upgrade platformio
 
+    
     - name: Compile with PlatformIO
+      if: matrix.environment == 'esp32dev'
       run: |
-        platformio run
+          platformio run --environment esp32dev 
+      #run: |
+      #  platformio run
 
 #    - name: Upload firmware artifact
 #      if: always()
