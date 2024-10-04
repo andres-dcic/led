@@ -7,6 +7,7 @@ using namespace fakeit;
 // Define el pin del LED (por ejemplo, el pin 2 para la ESP32)
 #define LED_PIN 2
 
+/*
 void setUp(void) {
     // Inicializa antes de cada prueba
    // Begin();
@@ -17,10 +18,11 @@ void tearDown(void) {
  //   End();
 }
 
-/*
+
 void test_example() {
     // Tu prueba aquí
 }*/
+
 
 void test_example(void)
 {
