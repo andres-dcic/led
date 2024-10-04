@@ -34,7 +34,7 @@ jobs:
     - name: Testing with PlatformIO
       if: matrix.environment == 'unit'
       run: |
-          platformio test --environment native 
+          platformio test --environment unit 
     
     
     - name: Compile with PlatformIO
