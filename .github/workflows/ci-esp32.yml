@@ -9,13 +9,9 @@ on:
   #    - develop
 
 jobs:
-  build:
+  build-and-test:
+    name: Build & Test
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        environment: [esp32dev, unit]  # List your environments here
-
 
     steps:
     - name: Checkout code
@@ -32,13 +28,11 @@ jobs:
 
 
     - name: Testing with PlatformIO
-      if: matrix.environment == 'unit'
       run: |
           platformio test --environment unit 
     
     
     - name: Compile with PlatformIO
-      if: matrix.environment == 'esp32dev'
       run: |
           platformio run --environment esp32dev 
       #run: |
